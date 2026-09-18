@@ -121,7 +121,7 @@ $valoresCategorias = array_values($categorias);
                     <i class="fa-solid fa-receipt w-6"></i> Transações
                 </a>
                 <a href="sair.php" class="flex items-center px-4 py-3 text-sm font-medium rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
-                    <i class="fa-solid fa-right-from-bracket">Sair</i>
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
                 </a>
             </nav>
             <div class="p-4 border-t border-slate-200 dark:border-slate-700">
