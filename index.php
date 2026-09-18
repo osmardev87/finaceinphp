@@ -120,9 +120,10 @@ $valoresCategorias = array_values($categorias);
                 <a href="#" onclick="switchTab('transactions')" id="nav-transactions" class="flex items-center px-4 py-3 text-sm font-medium rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
                     <i class="fa-solid fa-receipt w-6"></i> Transações
                 </a>
-                <a href="sair.php" class="flex items-center px-4 py-3 text-sm font-medium rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
-                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                <a href="sair.php" onclick="switchTab('transactions')" id="nav-transactions" class="flex items-center px-4 py-3 text-sm font-medium rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+                   <i class="fa-solid fa-right-from-bracket w-6"></i> Sair
                 </a>
+                
             </nav>
             <div class="p-4 border-t border-slate-200 dark:border-slate-700">
                 <button onclick="toggleDarkMode()" class="w-full flex items-center justify-center space-x-2 px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 text-sm font-medium transition">
