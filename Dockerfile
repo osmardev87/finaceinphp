@@ -1,18 +1,22 @@
-# Imagem oficial do PHP com suporte a PDO e SQLite
+# Imagem base
 FROM php:8.2-apache
 
-# Instalar extensões necessárias
+# Instalar dependências do sistema PRIMEIRO
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libsqlite3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Instalar extensões — agora com a biblioteca do SQLite disponível
 RUN docker-php-ext-install pdo pdo_sqlite
 
-# Habilitar mod_rewrite para Apache
+# Habilitar rewrite
 RUN a2enmod rewrite
 
-# Copiar todos os arquivos do projeto para dentro do container
+# Copiar arquivos do projeto
 COPY . /var/www/html/
 
-# Definir permissões (importante para o SQLite criar o arquivo)
+# Permissões
 RUN chown -R www-data:www-data /var/www/html/ \
     && chmod -R 755 /var/www/html/
 
-# Porta que vai ser usada
 EXPOSE 80
